@@ -190,16 +190,23 @@ const loadVideos = (searchText =  "") => {
 
         }
 
-        loadCategories();
-        loadVideos();
+       
 
-        //
+        
                     
 
         document.getElementById("search-input").addEventListener("keyup",(e)=>{
-                console.log(e.target.value)
+                loadVideos(e.target.value)
+                console.log()
         })
-     
+       
+        document.getElementById("sort-btn").addEventListener("onclick",(e)=>{
+                    loadVideos()
+
+        })
+        loadCategories();
+        loadVideos();
+
 
       //
     //   ${
